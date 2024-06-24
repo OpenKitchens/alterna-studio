@@ -1,0 +1,83 @@
+---
+// Define the features array directly in the Astro component
+const features = [
+  {
+    "url": "https://bytes.dev/archives/29#:~:text=WickedBlocks%20is%20a%20collection%20of%20120%2B%20layout%20blocks%20and%20components%20built%20with%20Tailwind%20CSS%20ready%20to%20copy%2Dpaste%20into%20your%20Tailwind%20project.%20If%20you%27d%20like%20the%20New%20England%20version%2C%20check%20out%20WickedBlachs.%20My%20boy%27s%20wicked%20smaht",
+    "title": "アートギャラリー"
+  },
+  {
+    "url": "https://www.producthunt.com/@michael_andreuzza/made",
+    "title": "バナー同盟"
+  },
+  {
+    "url": "https://buttondown.email/alpinejs/archive/alpinejs-weekly-72/#:~:text=Vertical%20tabs%20with%20Alpine.js%20by%20%40Mike_Andreuzza",
+    "title": "水Protocol"
+  },
+  {
+    "url": "https://buttondown.email/alpinejs/archive/alpinejs-weekly-72/#:~:text=Vertical%20tabs%20with%20Alpine.js%20by%20%40Mike_Andreuzza",
+    "title": "NetMemeRhythmGame"
+  },
+  {
+    "url": "https://github.com/bradtraversy/design-resources-for-developers",
+    "title": "オナニー日記"
+  }
+  // Add more features as needed...
+];
+---
+
+<section class="bg-primary">
+  <div class="px-8 2xl:max-w-7xl mx-auto py-6">
+    <div class="mt-32 space-y-2">
+      <div
+        class="h-0.5 bg-secondary"
+        data-aos="fade-up"
+        data-aos-duration="1000">
+      </div>
+      <h3
+        class="text-secondary text-xs font-medium"
+        data-aos="fade-up"
+        data-aos-duration="1500">
+        <span>Alternaで</span>
+        <span class="font-bold">精神を安定</span>
+        <span class="italic">させよう！</span>
+      </h3>
+      <div
+        class="h-1.5 bg-secondary"
+        data-aos="fade-up"
+        data-aos-duration="2000">
+      </div>
+      <div class="h-3 bg-secondary" data-aos="fade-up" data-aos-duration="2500">
+      </div>
+      <div class="h-6 bg-secondary" data-aos="fade-up" data-aos-duration="3000">
+      </div>
+      <div
+        class="h-12 bg-secondary"
+        data-aos="fade-up"
+        data-aos-duration="3000">
+      </div>
+      <div
+        class="h-24 bg-secondary"
+        data-aos="fade-up"
+        data-aos-duration="3000"
+        data-aos-delay="150">
+      </div>
+    </div>
+
+    <ul
+      class="mx-auto flex flex-col lg:flex-row text-left gap-3 items-start text-secondary mt-3">
+      {
+        features.map((template) => (
+          <>
+            <li class="flow-root col-span-full h-full ">
+              <a href={template.url}>
+                <div>
+                  <p class="italic shrink-0 text-xs ">{template.title}</p>
+                </div>
+              </a>
+            </li>
+          </>
+        ))
+      }
+    </ul>
+  </div>
+</section>

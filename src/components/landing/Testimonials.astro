@@ -1,0 +1,52 @@
+---
+// Define testimonials/opinions data
+const humanOpinions = [
+  {
+    name: "アートギャラリー",
+    opinion:
+      "暇すぎるもやしくんが作ったポスター的なもの",
+  },
+  {
+    name: "Alternaの性質",
+    opinion:
+      "ヲルタナのメンバー等は皆[ヒッピーxハッカーx陰キャx捻くれオタクx芸術家]みたいな性質を持ってると思う。",
+  },
+  {
+    name: "ヲルタナメンバー",
+    opinion:
+      "もやし、さめ、ピーマン",
+  },
+  {
+    name: "バナー同盟",
+    opinion:
+      "ゼロ年代リスペクト。",
+  },
+];
+---
+
+<section class="bg-primary">
+  <div class="px-8 2xl:max-w-7xl mx-auto py-6">
+    <div class="mt-6 space-y-2">
+      <div class="h-0.5 bg-secondary"></div>
+      <h3 class="text-secondary text-base font-medium">
+        <span>Alternaの</span>
+        <span class="font-bold">感性</span>
+      </h3>
+      <div class="h-1.5 bg-secondary"></div>
+    </div>
+    <div class="grid grid-cols-1 lg:grid-cols-4 text-secondary gap-6 pt-2 mt-2">
+      {
+        humanOpinions.map((opinion) => (
+         <div>
+            <p class="italic text-2xl block font-bold">
+              {opinion.name}
+            </p>
+            <p class="text-sm leading-relaxed mt-6">
+              {opinion.opinion}
+            </p>
+         </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
